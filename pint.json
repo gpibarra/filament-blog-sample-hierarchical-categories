@@ -1,0 +1,26 @@
+{
+    "preset": "laravel",
+    "exclude": [
+        "bootstrap",
+        "config",
+        "lang"
+    ],
+    "rules": {
+        "blank_line_before_statement": true,
+        "concat_space": {
+            "spacing": "none"
+        },
+        "no_unused_imports": false,
+        "method_argument_space": true,
+        "ordered_attributes": false,
+        "ordered_imports": {
+            "sort_algorithm": "none"
+        },
+        "ordered_interfaces": false,
+        "ordered_traits": false,
+        "single_trait_insert_per_statement": true,
+        "types_spaces": {
+            "space": "single"
+        }
+    }
+}

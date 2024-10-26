@@ -1,0 +1,19 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: 5
+    paths:
+        - app/
+    scanFiles:
+        - _ide_helper.php
+        - _ide_helper_models.php
+    # ignoreErrors:
+    #     -
+    #         identifier: missingType.iterableValue
+    tmpDir: build/phpstan
+    reportUnmatchedIgnoredErrors: false
+    # checkOctaneCompatibility: true
+    # checkModelProperties: true
+    # checkMissingIterableValueType: false
+
