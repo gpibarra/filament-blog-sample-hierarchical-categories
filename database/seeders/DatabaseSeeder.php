@@ -41,5 +41,16 @@ class DatabaseSeeder extends Seeder
                 )->random()->take(rand(0, 3))->pluck('id')->toArray()
             )
         );
+
+        $renameRecursive = function (\App\Models\Category $c, $deph = 0, $previuos = []) use (&$renameRecursive): void {
+            if ($c->relationLoaded('children')) {
+                $c->children->each(fn (\App\Models\Category $cc) => $renameRecursive($cc, $deph + 1, [...$previuos, $c->id]));
+            }
+            $c->name = 'Category '.($deph ? implode(' > ', $previuos).' > ' : '').($c->id);
+            $c->slug = \Illuminate\Support\Str::slug($c->name);
+            $c->save();
+        };
+        $roots = \App\Models\Category::getAllHierarchy();
+        $roots->each(fn (\App\Models\Category $c) => $renameRecursive($c));
     }
 }
