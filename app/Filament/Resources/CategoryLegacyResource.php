@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CategoryResource\Pages;
-use App\Filament\Resources\CategoryResource\RelationManagers;
+use App\Filament\Resources\CategoryLegacyResource\Pages;
+use App\Filament\Resources\CategoryLegacyResource\RelationManagers;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Arr;
 use App\Models\Category;
 
-class CategoryResource extends Resource
+class CategoryLegacyResource extends Resource
 {
     protected static ?string $model = Category::class;
 
@@ -26,7 +26,7 @@ class CategoryResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('Categories');
+        return __('Categories Legacy');
     }
 
     public static function form(Form $form): Form

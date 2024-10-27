@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PostResource\Pages;
-use App\Filament\Resources\PostResource\RelationManagers;
+use App\Filament\Resources\PostLegacyResource\Pages;
+use App\Filament\Resources\PostLegacyResource\RelationManagers;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Arr;
 use App\Models\Post;
 
-class PostResource extends Resource
+class PostLegacyResource extends Resource
 {
     protected static ?string $model = Post::class;
 
@@ -26,7 +26,7 @@ class PostResource extends Resource
 
     public static function getNavigationLabel(): string
     {
-        return __('Posts');
+        return __('Posts Legacy');
     }
 
     public static function form(Form $form): Form

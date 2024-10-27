@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources\PostResource\Pages;
+namespace App\Filament\Resources\PostLegacyResource\Pages;
 
-use App\Filament\Resources\PostResource;
+use App\Filament\Resources\PostLegacyResource as PostResource;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreatePost extends CreateRecord
