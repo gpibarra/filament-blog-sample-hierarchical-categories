@@ -9,7 +9,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\PostLegacyResource as PostResource;
+// use App\Filament\Resources\PostLegacyResource as PostResource;
+use App\Filament\Resources\PostNewResource as PostResource;
 use App\Models\Post;
 
 class PostsRelationManager extends RelationManager

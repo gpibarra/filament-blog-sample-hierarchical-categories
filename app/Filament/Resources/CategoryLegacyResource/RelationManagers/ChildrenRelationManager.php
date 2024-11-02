@@ -9,7 +9,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\CategoryLegacyResource as CategoryResource;
+// use App\Filament\Resources\CategoryLegacyResource as CategoryResource;
+use App\Filament\Resources\CategoryNewResource as CategoryResource;
 use App\Models\Category;
 
 class ChildrenRelationManager extends RelationManager
